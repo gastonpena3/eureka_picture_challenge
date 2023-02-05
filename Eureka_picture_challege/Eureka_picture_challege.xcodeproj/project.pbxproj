@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D316CBBA2990093C005910E8 /* Eureka_picture_challegeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBB92990093C005910E8 /* Eureka_picture_challegeApp.swift */; };
+		D316CBBC2990093C005910E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBBB2990093C005910E8 /* ContentView.swift */; };
+		D316CBBE2990093E005910E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D316CBBD2990093E005910E8 /* Assets.xcassets */; };
+		D316CBC12990093E005910E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D316CBC02990093E005910E8 /* Preview Assets.xcassets */; };
+		D316CBC32990093E005910E8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBC22990093E005910E8 /* Persistence.swift */; };
+		D316CBC62990093E005910E8 /* Eureka_picture_challege.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D316CBC42990093E005910E8 /* Eureka_picture_challege.xcdatamodeld */; };
+		D316CBD02990093F005910E8 /* Eureka_picture_challegeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBCF2990093F005910E8 /* Eureka_picture_challegeTests.swift */; };
+		D316CBDA2990093F005910E8 /* Eureka_picture_challegeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBD92990093F005910E8 /* Eureka_picture_challegeUITests.swift */; };
+		D316CBDC2990093F005910E8 /* Eureka_picture_challegeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBDB2990093F005910E8 /* Eureka_picture_challegeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D316CBCC2990093E005910E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D316CBAE2990093C005910E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D316CBB52990093C005910E8;
+			remoteInfo = Eureka_picture_challege;
+		};
+		D316CBD62990093F005910E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D316CBAE2990093C005910E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D316CBB52990093C005910E8;
+			remoteInfo = Eureka_picture_challege;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D316CBB62990093C005910E8 /* Eureka_picture_challege.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eureka_picture_challege.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D316CBB92990093C005910E8 /* Eureka_picture_challegeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eureka_picture_challegeApp.swift; sourceTree = "<group>"; };
+		D316CBBB2990093C005910E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D316CBBD2990093E005910E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D316CBC02990093E005910E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D316CBC22990093E005910E8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D316CBC52990093E005910E8 /* Eureka_picture_challege.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Eureka_picture_challege.xcdatamodel; sourceTree = "<group>"; };
+		D316CBCB2990093E005910E8 /* Eureka_picture_challegeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Eureka_picture_challegeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D316CBCF2990093F005910E8 /* Eureka_picture_challegeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eureka_picture_challegeTests.swift; sourceTree = "<group>"; };
+		D316CBD52990093F005910E8 /* Eureka_picture_challegeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Eureka_picture_challegeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D316CBD92990093F005910E8 /* Eureka_picture_challegeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eureka_picture_challegeUITests.swift; sourceTree = "<group>"; };
+		D316CBDB2990093F005910E8 /* Eureka_picture_challegeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eureka_picture_challegeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D316CBB32990093C005910E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D316CBC82990093E005910E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D316CBD22990093F005910E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D316CBAD2990093C005910E8 = {
+			isa = PBXGroup;
+			children = (
+				D316CBB82990093C005910E8 /* Eureka_picture_challege */,
+				D316CBCE2990093F005910E8 /* Eureka_picture_challegeTests */,
+				D316CBD82990093F005910E8 /* Eureka_picture_challegeUITests */,
+				D316CBB72990093C005910E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D316CBB72990093C005910E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D316CBB62990093C005910E8 /* Eureka_picture_challege.app */,
+				D316CBCB2990093E005910E8 /* Eureka_picture_challegeTests.xctest */,
+				D316CBD52990093F005910E8 /* Eureka_picture_challegeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D316CBB82990093C005910E8 /* Eureka_picture_challege */ = {
+			isa = PBXGroup;
+			children = (
+				D316CBB92990093C005910E8 /* Eureka_picture_challegeApp.swift */,
+				D316CBBB2990093C005910E8 /* ContentView.swift */,
+				D316CBBD2990093E005910E8 /* Assets.xcassets */,
+				D316CBC22990093E005910E8 /* Persistence.swift */,
+				D316CBC42990093E005910E8 /* Eureka_picture_challege.xcdatamodeld */,
+				D316CBBF2990093E005910E8 /* Preview Content */,
+			);
+			path = Eureka_picture_challege;
+			sourceTree = "<group>";
+		};
+		D316CBBF2990093E005910E8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D316CBC02990093E005910E8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D316CBCE2990093F005910E8 /* Eureka_picture_challegeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D316CBCF2990093F005910E8 /* Eureka_picture_challegeTests.swift */,
+			);
+			path = Eureka_picture_challegeTests;
+			sourceTree = "<group>";
+		};
+		D316CBD82990093F005910E8 /* Eureka_picture_challegeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D316CBD92990093F005910E8 /* Eureka_picture_challegeUITests.swift */,
+				D316CBDB2990093F005910E8 /* Eureka_picture_challegeUITestsLaunchTests.swift */,
+			);
+			path = Eureka_picture_challegeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D316CBB52990093C005910E8 /* Eureka_picture_challege */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D316CBDF2990093F005910E8 /* Build configuration list for PBXNativeTarget "Eureka_picture_challege" */;
+			buildPhases = (
+				D316CBB22990093C005910E8 /* Sources */,
+				D316CBB32990093C005910E8 /* Frameworks */,
+				D316CBB42990093C005910E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Eureka_picture_challege;
+			productName = Eureka_picture_challege;
+			productReference = D316CBB62990093C005910E8 /* Eureka_picture_challege.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D316CBCA2990093E005910E8 /* Eureka_picture_challegeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D316CBE22990093F005910E8 /* Build configuration list for PBXNativeTarget "Eureka_picture_challegeTests" */;
+			buildPhases = (
+				D316CBC72990093E005910E8 /* Sources */,
+				D316CBC82990093E005910E8 /* Frameworks */,
+				D316CBC92990093E005910E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D316CBCD2990093E005910E8 /* PBXTargetDependency */,
+			);
+			name = Eureka_picture_challegeTests;
+			productName = Eureka_picture_challegeTests;
+			productReference = D316CBCB2990093E005910E8 /* Eureka_picture_challegeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D316CBD42990093F005910E8 /* Eureka_picture_challegeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D316CBE52990093F005910E8 /* Build configuration list for PBXNativeTarget "Eureka_picture_challegeUITests" */;
+			buildPhases = (
+				D316CBD12990093F005910E8 /* Sources */,
+				D316CBD22990093F005910E8 /* Frameworks */,
+				D316CBD32990093F005910E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D316CBD72990093F005910E8 /* PBXTargetDependency */,
+			);
+			name = Eureka_picture_challegeUITests;
+			productName = Eureka_picture_challegeUITests;
+			productReference = D316CBD52990093F005910E8 /* Eureka_picture_challegeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D316CBAE2990093C005910E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D316CBB52990093C005910E8 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D316CBCA2990093E005910E8 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D316CBB52990093C005910E8;
+					};
+					D316CBD42990093F005910E8 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D316CBB52990093C005910E8;
+					};
+				};
+			};
+			buildConfigurationList = D316CBB12990093C005910E8 /* Build configuration list for PBXProject "Eureka_picture_challege" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D316CBAD2990093C005910E8;
+			productRefGroup = D316CBB72990093C005910E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D316CBB52990093C005910E8 /* Eureka_picture_challege */,
+				D316CBCA2990093E005910E8 /* Eureka_picture_challegeTests */,
+				D316CBD42990093F005910E8 /* Eureka_picture_challegeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D316CBB42990093C005910E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D316CBC12990093E005910E8 /* Preview Assets.xcassets in Resources */,
+				D316CBBE2990093E005910E8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D316CBC92990093E005910E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D316CBD32990093F005910E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D316CBB22990093C005910E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D316CBC62990093E005910E8 /* Eureka_picture_challege.xcdatamodeld in Sources */,
+				D316CBC32990093E005910E8 /* Persistence.swift in Sources */,
+				D316CBBC2990093C005910E8 /* ContentView.swift in Sources */,
+				D316CBBA2990093C005910E8 /* Eureka_picture_challegeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D316CBC72990093E005910E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D316CBD02990093F005910E8 /* Eureka_picture_challegeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D316CBD12990093F005910E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D316CBDA2990093F005910E8 /* Eureka_picture_challegeUITests.swift in Sources */,
+				D316CBDC2990093F005910E8 /* Eureka_picture_challegeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D316CBCD2990093E005910E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D316CBB52990093C005910E8 /* Eureka_picture_challege */;
+			targetProxy = D316CBCC2990093E005910E8 /* PBXContainerItemProxy */;
+		};
+		D316CBD72990093F005910E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D316CBB52990093C005910E8 /* Eureka_picture_challege */;
+			targetProxy = D316CBD62990093F005910E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D316CBDD2990093F005910E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D316CBDE2990093F005910E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D316CBE02990093F005910E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Eureka_picture_challege/Preview Content\"";
+				DEVELOPMENT_TEAM = B5ZMBC5VV7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gastonPenaInc.Eureka-picture-challege";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D316CBE12990093F005910E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Eureka_picture_challege/Preview Content\"";
+				DEVELOPMENT_TEAM = B5ZMBC5VV7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gastonPenaInc.Eureka-picture-challege";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D316CBE32990093F005910E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5ZMBC5VV7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gastonPenaInc.Eureka-picture-challegeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eureka_picture_challege.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Eureka_picture_challege";
+			};
+			name = Debug;
+		};
+		D316CBE42990093F005910E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5ZMBC5VV7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gastonPenaInc.Eureka-picture-challegeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eureka_picture_challege.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Eureka_picture_challege";
+			};
+			name = Release;
+		};
+		D316CBE62990093F005910E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5ZMBC5VV7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gastonPenaInc.Eureka-picture-challegeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Eureka_picture_challege;
+			};
+			name = Debug;
+		};
+		D316CBE72990093F005910E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B5ZMBC5VV7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gastonPenaInc.Eureka-picture-challegeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Eureka_picture_challege;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D316CBB12990093C005910E8 /* Build configuration list for PBXProject "Eureka_picture_challege" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D316CBDD2990093F005910E8 /* Debug */,
+				D316CBDE2990093F005910E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D316CBDF2990093F005910E8 /* Build configuration list for PBXNativeTarget "Eureka_picture_challege" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D316CBE02990093F005910E8 /* Debug */,
+				D316CBE12990093F005910E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D316CBE22990093F005910E8 /* Build configuration list for PBXNativeTarget "Eureka_picture_challegeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D316CBE32990093F005910E8 /* Debug */,
+				D316CBE42990093F005910E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D316CBE52990093F005910E8 /* Build configuration list for PBXNativeTarget "Eureka_picture_challegeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D316CBE62990093F005910E8 /* Debug */,
+				D316CBE72990093F005910E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D316CBC42990093E005910E8 /* Eureka_picture_challege.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D316CBC52990093E005910E8 /* Eureka_picture_challege.xcdatamodel */,
+			);
+			currentVersion = D316CBC52990093E005910E8 /* Eureka_picture_challege.xcdatamodel */;
+			path = Eureka_picture_challege.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D316CBAE2990093C005910E8 /* Project object */;
+}
