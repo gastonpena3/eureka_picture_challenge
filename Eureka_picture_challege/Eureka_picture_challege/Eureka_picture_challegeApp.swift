@@ -13,7 +13,8 @@ struct Eureka_picture_challegeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .background(Color.white)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

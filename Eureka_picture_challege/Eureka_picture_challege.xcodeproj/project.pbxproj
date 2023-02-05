@@ -16,6 +16,17 @@
 		D316CBD02990093F005910E8 /* Eureka_picture_challegeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBCF2990093F005910E8 /* Eureka_picture_challegeTests.swift */; };
 		D316CBDA2990093F005910E8 /* Eureka_picture_challegeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBD92990093F005910E8 /* Eureka_picture_challegeUITests.swift */; };
 		D316CBDC2990093F005910E8 /* Eureka_picture_challegeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBDB2990093F005910E8 /* Eureka_picture_challegeUITestsLaunchTests.swift */; };
+		D316CBEA29900AA2005910E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBE929900AA2005910E8 /* HomeView.swift */; };
+		D316CBEC2990132F005910E8 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBEB2990132F005910E8 /* PictureView.swift */; };
+		D316CBEF29901BAB005910E8 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBEE29901BAB005910E8 /* CameraManager.swift */; };
+		D316CBF129901CBB005910E8 /* CameraCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBF029901CBB005910E8 /* CameraCoordinator.swift */; };
+		D3DA772C29904A5F001B4D95 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA772B29904A5F001B4D95 /* LocationManager.swift */; };
+		D3DA773029904CAE001B4D95 /* PictureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA772F29904CAE001B4D95 /* PictureDetail.swift */; };
+		D3DA773329905F22001B4D95 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = D3DA773229905F22001B4D95 /* GoogleMaps */; };
+		D3DA773529905F22001B4D95 /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = D3DA773429905F22001B4D95 /* GoogleMapsBase */; };
+		D3DA773729905F22001B4D95 /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = D3DA773629905F22001B4D95 /* GooglePlaces */; };
+		D3DA773A29906079001B4D95 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA773929906079001B4D95 /* APIConfig.swift */; };
+		D3DA773C299061C4001B4D95 /* GoogleMapsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA773B299061C4001B4D95 /* GoogleMapsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +59,14 @@
 		D316CBD52990093F005910E8 /* Eureka_picture_challegeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Eureka_picture_challegeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D316CBD92990093F005910E8 /* Eureka_picture_challegeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eureka_picture_challegeUITests.swift; sourceTree = "<group>"; };
 		D316CBDB2990093F005910E8 /* Eureka_picture_challegeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eureka_picture_challegeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D316CBE929900AA2005910E8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D316CBEB2990132F005910E8 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		D316CBEE29901BAB005910E8 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		D316CBF029901CBB005910E8 /* CameraCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCoordinator.swift; sourceTree = "<group>"; };
+		D3DA772B29904A5F001B4D95 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D3DA772F29904CAE001B4D95 /* PictureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetail.swift; sourceTree = "<group>"; };
+		D3DA773929906079001B4D95 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		D3DA773B299061C4001B4D95 /* GoogleMapsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DA773729905F22001B4D95 /* GooglePlaces in Frameworks */,
+				D3DA773329905F22001B4D95 /* GoogleMaps in Frameworks */,
+				D3DA773529905F22001B4D95 /* GoogleMapsBase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +120,11 @@
 		D316CBB82990093C005910E8 /* Eureka_picture_challege */ = {
 			isa = PBXGroup;
 			children = (
+				D3DA773829906061001B4D95 /* API */,
+				D3DA772E29904C9B001B4D95 /* PhotoDetail */,
+				D3DA772D29904AFF001B4D95 /* Location */,
+				D316CBED29901B5C005910E8 /* Camera */,
+				D316CBE829900A91005910E8 /* Home */,
 				D316CBB92990093C005910E8 /* Eureka_picture_challegeApp.swift */,
 				D316CBBB2990093C005910E8 /* ContentView.swift */,
 				D316CBBD2990093E005910E8 /* Assets.xcassets */,
@@ -133,6 +160,49 @@
 			path = Eureka_picture_challegeUITests;
 			sourceTree = "<group>";
 		};
+		D316CBE829900A91005910E8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D316CBE929900AA2005910E8 /* HomeView.swift */,
+				D316CBEB2990132F005910E8 /* PictureView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D316CBED29901B5C005910E8 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				D316CBEE29901BAB005910E8 /* CameraManager.swift */,
+				D316CBF029901CBB005910E8 /* CameraCoordinator.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		D3DA772D29904AFF001B4D95 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				D3DA772B29904A5F001B4D95 /* LocationManager.swift */,
+				D3DA773B299061C4001B4D95 /* GoogleMapsManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		D3DA772E29904C9B001B4D95 /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D3DA772F29904CAE001B4D95 /* PictureDetail.swift */,
+			);
+			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		D3DA773829906061001B4D95 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D3DA773929906079001B4D95 /* APIConfig.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +219,11 @@
 			dependencies = (
 			);
 			name = Eureka_picture_challege;
+			packageProductDependencies = (
+				D3DA773229905F22001B4D95 /* GoogleMaps */,
+				D3DA773429905F22001B4D95 /* GoogleMapsBase */,
+				D3DA773629905F22001B4D95 /* GooglePlaces */,
+			);
 			productName = Eureka_picture_challege;
 			productReference = D316CBB62990093C005910E8 /* Eureka_picture_challege.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +296,9 @@
 				Base,
 			);
 			mainGroup = D316CBAD2990093C005910E8;
+			packageReferences = (
+				D3DA773129905F22001B4D95 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */,
+			);
 			productRefGroup = D316CBB72990093C005910E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,8 +343,16 @@
 			files = (
 				D316CBC62990093E005910E8 /* Eureka_picture_challege.xcdatamodeld in Sources */,
 				D316CBC32990093E005910E8 /* Persistence.swift in Sources */,
+				D3DA773A29906079001B4D95 /* APIConfig.swift in Sources */,
 				D316CBBC2990093C005910E8 /* ContentView.swift in Sources */,
+				D316CBEC2990132F005910E8 /* PictureView.swift in Sources */,
+				D3DA773029904CAE001B4D95 /* PictureDetail.swift in Sources */,
+				D316CBEF29901BAB005910E8 /* CameraManager.swift in Sources */,
+				D316CBEA29900AA2005910E8 /* HomeView.swift in Sources */,
 				D316CBBA2990093C005910E8 /* Eureka_picture_challegeApp.swift in Sources */,
+				D316CBF129901CBB005910E8 /* CameraCoordinator.swift in Sources */,
+				D3DA772C29904A5F001B4D95 /* LocationManager.swift in Sources */,
+				D3DA773C299061C4001B4D95 /* GoogleMapsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +514,9 @@
 				DEVELOPMENT_TEAM = B5ZMBC5VV7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera permission to take great Pictures";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to access your location to help you organice your Pictures";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location to help you organice your Pictures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,6 +546,9 @@
 				DEVELOPMENT_TEAM = B5ZMBC5VV7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera permission to take great Pictures";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to access your location to help you organice your Pictures";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to access your location to help you organice your Pictures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -591,6 +683,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D3DA773129905F22001B4D95 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/YAtechnologies/GoogleMaps-SP";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D3DA773229905F22001B4D95 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3DA773129905F22001B4D95 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
+			productName = GoogleMaps;
+		};
+		D3DA773429905F22001B4D95 /* GoogleMapsBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3DA773129905F22001B4D95 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
+			productName = GoogleMapsBase;
+		};
+		D3DA773629905F22001B4D95 /* GooglePlaces */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3DA773129905F22001B4D95 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
+			productName = GooglePlaces;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D316CBC42990093E005910E8 /* Eureka_picture_challege.xcdatamodeld */ = {
