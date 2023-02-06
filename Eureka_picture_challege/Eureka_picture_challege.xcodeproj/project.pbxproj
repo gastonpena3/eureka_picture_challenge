@@ -21,12 +21,16 @@
 		D316CBEF29901BAB005910E8 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBEE29901BAB005910E8 /* CameraManager.swift */; };
 		D316CBF129901CBB005910E8 /* CameraCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D316CBF029901CBB005910E8 /* CameraCoordinator.swift */; };
 		D3DA772C29904A5F001B4D95 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA772B29904A5F001B4D95 /* LocationManager.swift */; };
-		D3DA773029904CAE001B4D95 /* PictureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA772F29904CAE001B4D95 /* PictureDetail.swift */; };
+		D3DA773029904CAE001B4D95 /* PhotoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA772F29904CAE001B4D95 /* PhotoDetail.swift */; };
 		D3DA773329905F22001B4D95 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = D3DA773229905F22001B4D95 /* GoogleMaps */; };
 		D3DA773529905F22001B4D95 /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = D3DA773429905F22001B4D95 /* GoogleMapsBase */; };
 		D3DA773729905F22001B4D95 /* GooglePlaces in Frameworks */ = {isa = PBXBuildFile; productRef = D3DA773629905F22001B4D95 /* GooglePlaces */; };
 		D3DA773A29906079001B4D95 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA773929906079001B4D95 /* APIConfig.swift */; };
 		D3DA773C299061C4001B4D95 /* GoogleMapsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA773B299061C4001B4D95 /* GoogleMapsManager.swift */; };
+		D3DA774029907E50001B4D95 /* PhotoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3DA773E29907E50001B4D95 /* PhotoModel.xcdatamodeld */; };
+		D3DA774329907FBB001B4D95 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA774229907FBB001B4D95 /* CoreDataManager.swift */; };
+		D3DA77452990842D001B4D95 /* PhotoImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA77442990842D001B4D95 /* PhotoImageTransformer.swift */; };
+		D3DA77472990873D001B4D95 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DA77462990873D001B4D95 /* PhotoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +68,13 @@
 		D316CBEE29901BAB005910E8 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		D316CBF029901CBB005910E8 /* CameraCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCoordinator.swift; sourceTree = "<group>"; };
 		D3DA772B29904A5F001B4D95 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		D3DA772F29904CAE001B4D95 /* PictureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetail.swift; sourceTree = "<group>"; };
+		D3DA772F29904CAE001B4D95 /* PhotoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetail.swift; sourceTree = "<group>"; };
 		D3DA773929906079001B4D95 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		D3DA773B299061C4001B4D95 /* GoogleMapsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsManager.swift; sourceTree = "<group>"; };
+		D3DA773F29907E50001B4D95 /* PhotoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoModel.xcdatamodel; sourceTree = "<group>"; };
+		D3DA774229907FBB001B4D95 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D3DA77442990842D001B4D95 /* PhotoImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageTransformer.swift; sourceTree = "<group>"; };
+		D3DA77462990873D001B4D95 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,8 @@
 		D316CBB82990093C005910E8 /* Eureka_picture_challege */ = {
 			isa = PBXGroup;
 			children = (
+				D3DA774129907F9D001B4D95 /* Coredata */,
+				D3DA773D29907E2C001B4D95 /* Model */,
 				D3DA773829906061001B4D95 /* API */,
 				D3DA772E29904C9B001B4D95 /* PhotoDetail */,
 				D3DA772D29904AFF001B4D95 /* Location */,
@@ -190,7 +200,7 @@
 		D3DA772E29904C9B001B4D95 /* PhotoDetail */ = {
 			isa = PBXGroup;
 			children = (
-				D3DA772F29904CAE001B4D95 /* PictureDetail.swift */,
+				D3DA772F29904CAE001B4D95 /* PhotoDetail.swift */,
 			);
 			path = PhotoDetail;
 			sourceTree = "<group>";
@@ -201,6 +211,24 @@
 				D3DA773929906079001B4D95 /* APIConfig.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		D3DA773D29907E2C001B4D95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3DA773E29907E50001B4D95 /* PhotoModel.xcdatamodeld */,
+				D3DA77462990873D001B4D95 /* PhotoViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3DA774129907F9D001B4D95 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				D3DA774229907FBB001B4D95 /* CoreDataManager.swift */,
+				D3DA77442990842D001B4D95 /* PhotoImageTransformer.swift */,
+			);
+			path = Coredata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,17 +369,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DA774029907E50001B4D95 /* PhotoModel.xcdatamodeld in Sources */,
 				D316CBC62990093E005910E8 /* Eureka_picture_challege.xcdatamodeld in Sources */,
 				D316CBC32990093E005910E8 /* Persistence.swift in Sources */,
 				D3DA773A29906079001B4D95 /* APIConfig.swift in Sources */,
 				D316CBBC2990093C005910E8 /* ContentView.swift in Sources */,
+				D3DA77472990873D001B4D95 /* PhotoViewModel.swift in Sources */,
 				D316CBEC2990132F005910E8 /* PictureView.swift in Sources */,
-				D3DA773029904CAE001B4D95 /* PictureDetail.swift in Sources */,
+				D3DA77452990842D001B4D95 /* PhotoImageTransformer.swift in Sources */,
+				D3DA773029904CAE001B4D95 /* PhotoDetail.swift in Sources */,
 				D316CBEF29901BAB005910E8 /* CameraManager.swift in Sources */,
 				D316CBEA29900AA2005910E8 /* HomeView.swift in Sources */,
 				D316CBBA2990093C005910E8 /* Eureka_picture_challegeApp.swift in Sources */,
 				D316CBF129901CBB005910E8 /* CameraCoordinator.swift in Sources */,
 				D3DA772C29904A5F001B4D95 /* LocationManager.swift in Sources */,
+				D3DA774329907FBB001B4D95 /* CoreDataManager.swift in Sources */,
 				D3DA773C299061C4001B4D95 /* GoogleMapsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,6 +753,16 @@
 			);
 			currentVersion = D316CBC52990093E005910E8 /* Eureka_picture_challege.xcdatamodel */;
 			path = Eureka_picture_challege.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		D3DA773E29907E50001B4D95 /* PhotoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3DA773F29907E50001B4D95 /* PhotoModel.xcdatamodel */,
+			);
+			currentVersion = D3DA773F29907E50001B4D95 /* PhotoModel.xcdatamodel */;
+			path = PhotoModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

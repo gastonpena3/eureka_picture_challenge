@@ -9,19 +9,15 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
-    
-    @Environment(\.managedObjectContext) private var viewContext
-    
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+
+    @ObservedObject var viewModel = PhotoViewModel()
     
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State private var selectedImage: UIImage?
-    @State private var selectedImageData: [UIImagePickerController.InfoKey: Any]?
     @State private var isImagePickerDisplay = false
     @State private var showNextPage = false
+    
+    var defaultImage: UIImage = UIImage(systemName: "photo") ?? UIImage()
     
     var body: some View {
         
@@ -31,18 +27,34 @@ struct HomeView: View {
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     ScrollView(.vertical, showsIndicators: false) {
-                        ForEach(items) { item in
-                            HStack {
-                                NavigationLink(destination: {
-                                    //print("OPEN IMAGE")
-                                    PictureView()
-                                }, label: {
-                                    PictureView().onTapGesture {
-                                        print("PICTURE TAP")
-                                    }
-                                })
+                        if viewModel.hasStorePhotos() {
+                            ForEach(viewModel.getStorePhotos()) { photo in
+                                HStack {
+                                    //ForEach(0..<3) { index in
+                                        NavigationLink(destination: {
+                                            PhotoDetail(selectedImage: (selectedImage ?? defaultImage))
+                                        }, label: {
+                                            PictureView(image: photo.image as? UIImage ?? defaultImage)
+                                        })
+                                    //}
+                                    
+                                }
                             }
+                        } else {
+                
+                            Image(systemName: "photo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 100)
+                                .padding(.top, 50)
+                                .foregroundColor(Color.red)
+                            
+                            Text("You haven´t take any picture yet!")
+                                .font(.headline).bold()
+                                .foregroundColor(Color.red)
+                                .padding()
                         }
+                        
                     }
                     
                     Spacer()
@@ -78,14 +90,13 @@ struct HomeView: View {
             
             .sheet(isPresented: self.$isImagePickerDisplay, onDismiss: {
                 if let image = selectedImage {
-                    print("IMAGE TAKEN")
                     showNextPage.toggle()
                 }
             }) {
                 CameraManager(selectedImage: self.$selectedImage, sourceType: self.sourceType)
             }
             
-            NavigationLink(destination: PictureDetail(selectedImage: selectedImage ?? UIImage()), isActive: $showNextPage) {}
+            NavigationLink(destination: PhotoDetail(selectedImage: selectedImage ?? UIImage()), isActive: $showNextPage) {}
             
         }.accentColor(.white) 
 

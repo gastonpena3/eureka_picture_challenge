@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct PictureDetail: View {
+struct PhotoDetail: View {
+    
+    private var context = CoreDataManager.shared.persistentContainer.viewContext
+    
     @StateObject var locationManager = LocationManager()
     @State private var selectedImage: UIImage
     
@@ -41,6 +44,18 @@ struct PictureDetail: View {
         .toolbarBackground(.red, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         
+        .onAppear() {
+            saveImage()
+        }
+    }
+    
+    func saveImage() {
+        let photo = Photo(context: context)
+        photo.image = selectedImage
+        photo.latitude = Float(locationManager.latitude)
+        photo.longitude = Float(locationManager.longitude)
+        
+        try? self.context.save()
     }
 }
 
