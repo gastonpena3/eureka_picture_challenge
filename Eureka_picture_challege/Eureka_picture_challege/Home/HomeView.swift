@@ -28,11 +28,11 @@ struct HomeView: View {
                 VStack {
                     ScrollView(.vertical, showsIndicators: false) {
                         if viewModel.hasStorePhotos() {
-                            ForEach(viewModel.getStorePhotos()) { photo in
+                            ForEach(viewModel.getStorePhotos().reversed()) { photo in
                                 HStack {
                                     //ForEach(0..<3) { index in
                                         NavigationLink(destination: {
-                                            PhotoDetail(selectedImage: (selectedImage ?? defaultImage))
+                                            PhotoDetail(selectedImage: (photo.image as? UIImage ?? defaultImage), isNewPhoto: false)
                                         }, label: {
                                             PictureView(image: photo.image as? UIImage ?? defaultImage)
                                         })
@@ -96,7 +96,7 @@ struct HomeView: View {
                 CameraManager(selectedImage: self.$selectedImage, sourceType: self.sourceType)
             }
             
-            NavigationLink(destination: PhotoDetail(selectedImage: selectedImage ?? UIImage()), isActive: $showNextPage) {}
+            NavigationLink(destination: PhotoDetail(selectedImage: selectedImage ?? UIImage(), isNewPhoto: true), isActive: $showNextPage) {}
             
         }.accentColor(.white) 
 

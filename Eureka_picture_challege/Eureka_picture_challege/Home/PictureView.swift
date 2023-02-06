@@ -17,10 +17,10 @@ struct PictureView: View {
         Image(uiImage: image)
             .resizable()
             .aspectRatio(contentMode: .fill)
+            .frame(width: UIScreen.main.bounds.width / 2 - 20, height: UIScreen.main.bounds.width / 2 - 20)
             .cornerRadius(5)
-            .border(Color.black)
-            .frame(width: screen.width / 3, height: screen.width / 3)
-            .padding(.all, 5)
+            .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 0)
+            .padding()
     }
 }
 

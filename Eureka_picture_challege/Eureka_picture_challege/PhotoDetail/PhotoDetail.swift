@@ -9,13 +9,18 @@ import SwiftUI
 
 struct PhotoDetail: View {
     
-    private var context = CoreDataManager.shared.persistentContainer.viewContext
+    //private var context = CoreDataManager.shared.persistentContainer.viewContext
+    
+    @ObservedObject var viewModel = PhotoViewModel()
     
     @StateObject var locationManager = LocationManager()
     @State private var selectedImage: UIImage
     
-    init(selectedImage: UIImage) {
+    private var isNewPhoto = false
+    
+    init(selectedImage: UIImage, isNewPhoto: Bool) {
         self.selectedImage = selectedImage
+        self.isNewPhoto = isNewPhoto
     }
     
     var body: some View {
@@ -44,18 +49,12 @@ struct PhotoDetail: View {
         .toolbarBackground(.red, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         
-        .onAppear() {
-            saveImage()
+        .onDisappear() {
+            if isNewPhoto {
+                viewModel.saveImage(selectedImage: selectedImage, latitude: Float(locationManager.latitude), longitude: Float(locationManager.longitude))
+            }
         }
     }
-    
-    func saveImage() {
-        let photo = Photo(context: context)
-        photo.image = selectedImage
-        photo.latitude = Float(locationManager.latitude)
-        photo.longitude = Float(locationManager.longitude)
-        
-        try? self.context.save()
-    }
+
 }
 

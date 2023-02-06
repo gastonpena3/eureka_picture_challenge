@@ -12,7 +12,7 @@ import CoreData
 
 class PhotoViewModel: ObservableObject {
     
-    private var context = CoreDataManager.shared.persistentContainer.viewContext
+    @Published var context = CoreDataManager.shared.persistentContainer.viewContext
     
     func getStorePhotos() -> [Photo] {
         
@@ -29,5 +29,14 @@ class PhotoViewModel: ObservableObject {
     
     func hasStorePhotos() -> Bool {
         return getStorePhotos().count > 0 ? true : false
+    }
+    
+    func saveImage(selectedImage: UIImage, latitude: Float, longitude: Float) {
+        let photo = Photo(context: context)
+        photo.image = selectedImage
+        photo.latitude = latitude
+        photo.longitude = longitude
+        
+        try? self.context.save()
     }
 }
