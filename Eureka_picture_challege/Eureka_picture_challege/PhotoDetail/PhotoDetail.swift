@@ -53,11 +53,11 @@ struct PhotoDetail: View {
         .toolbarBackground(.red, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         
-        .onAppear() {
+        .onDisappear() {
             
             if isNewPhoto {
                 
-                viewModel.saveImage(selectedImage: selectedImage, latitude: Double(viewModel.locationManager.latitude), longitude: Double(viewModel.locationManager.longitude))
+                viewModel.saveImage(selectedImage: selectedImage, latitude: viewModel.locationManager.latitude, longitude: viewModel.locationManager.longitude)
                 viewModel.updatePhotoStoreData()
             }
         }

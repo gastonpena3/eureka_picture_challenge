@@ -13,7 +13,8 @@ import CoreData
 class PhotoViewModel: ObservableObject {
     
     var context = CoreDataManager.shared.persistentContainer.viewContext
-    @StateObject var locationManager = LocationManager()
+    
+    @State var locationManager = LocationManager()
     @Published var photos: [Photo] = []
     
     var defaultImage: UIImage = UIImage(systemName: "photo") ?? UIImage()
