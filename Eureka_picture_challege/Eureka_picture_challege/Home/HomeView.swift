@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct HomeView: View {
-
+    
     @ObservedObject var viewModel = PhotoViewModel()
     
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
@@ -17,31 +17,32 @@ struct HomeView: View {
     @State private var isImagePickerDisplay = false
     @State private var showNextPage = false
     
-    var defaultImage: UIImage = UIImage(systemName: "photo") ?? UIImage()
-    
     var body: some View {
         
         NavigationStack {
+            
             ZStack {
                 Color.white
                     .edgesIgnoringSafeArea(.all)
                 VStack {
+                    
                     ScrollView(.vertical, showsIndicators: false) {
+                        
                         if viewModel.hasStorePhotos() {
-                            ForEach(viewModel.getStorePhotos().reversed()) { photo in
+                            
+                            ForEach(viewModel.photos.reversed()) { photo in
                                 HStack {
-                                    //ForEach(0..<3) { index in
-                                        NavigationLink(destination: {
-                                            PhotoDetail(selectedImage: (photo.image as? UIImage ?? defaultImage), isNewPhoto: false)
-                                        }, label: {
-                                            PictureView(image: photo.image as? UIImage ?? defaultImage)
-                                        })
-                                    //}
                                     
+                                    NavigationLink(destination: {
+                                        
+                                        PhotoDetail(selectedImage: (photo.image as? UIImage ?? viewModel.defaultImage), selectedImageLatitude: photo.latitude, selectedImageLongitude: photo.longitude, isNewPhoto: false)
+                                    }, label: {
+                                        PictureView(image: photo.image as? UIImage ?? viewModel.defaultImage)
+                                    })
                                 }
                             }
                         } else {
-                
+                            
                             Image(systemName: "photo")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
@@ -58,15 +59,19 @@ struct HomeView: View {
                     }
                     
                     Spacer()
+                    
                     Button(action: {
+                        
                         self.sourceType = .camera
                         self.isImagePickerDisplay.toggle()
                     }, label: {
                         
                         HStack(alignment: .center) {
+                            
                             Image(systemName: "camera")
                                 .padding(.trailing, 10)
                                 .foregroundColor(Color.white)
+                            
                             Text("Take Picture!")
                                 .font(Font.custom("Roboto-Bold", size: 14))
                                 .multilineTextAlignment(.center)
@@ -89,21 +94,35 @@ struct HomeView: View {
             .navigationBarTitle("Eureka Photo Data")
             
             .sheet(isPresented: self.$isImagePickerDisplay, onDismiss: {
-                if let image = selectedImage {
+                
+                if selectedImage != nil {
+                    
                     showNextPage.toggle()
                 }
             }) {
+                
                 CameraManager(selectedImage: self.$selectedImage, sourceType: self.sourceType)
             }
             
-            NavigationLink(destination: PhotoDetail(selectedImage: selectedImage ?? UIImage(), isNewPhoto: true), isActive: $showNextPage) {}
+            NavigationLink(destination:
+                PhotoDetail(selectedImage: selectedImage ?? viewModel.defaultImage, selectedImageLatitude: viewModel.locationManager.latitude, selectedImageLongitude: viewModel.locationManager.longitude, isNewPhoto: true), isActive: $showNextPage) {}
             
-        }.accentColor(.white) 
-
+        }.accentColor(.white)
+        
+        .onAppear() {
+            
+            viewModel.updatePhotoStoreData()
+        }
+        
+        .refreshable {
+            
+            viewModel.updatePhotoStoreData()
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
+    
     static var previews: some View {
         HomeView()
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)

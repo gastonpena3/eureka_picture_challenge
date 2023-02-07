@@ -17,7 +17,7 @@ struct PictureView: View {
         Image(uiImage: image)
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: UIScreen.main.bounds.width / 2 - 20, height: UIScreen.main.bounds.width / 2 - 20)
+            .frame(width: screen.width / 2, height: screen.width / 2)
             .cornerRadius(5)
             .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 0)
             .padding()
@@ -25,7 +25,9 @@ struct PictureView: View {
 }
 
 struct PictureView_Previews: PreviewProvider {
+    
     static var previews: some View {
+        
         PictureView(image: UIImage(systemName: "photo") ?? UIImage())
     }
 }

@@ -12,8 +12,19 @@ import CoreData
 
 class PhotoViewModel: ObservableObject {
     
-    @Published var context = CoreDataManager.shared.persistentContainer.viewContext
+    var context = CoreDataManager.shared.persistentContainer.viewContext
+    @StateObject var locationManager = LocationManager()
+    @Published var photos: [Photo] = []
     
+    var defaultImage: UIImage = UIImage(systemName: "photo") ?? UIImage()
+    
+    //Update Photos Array
+    func updatePhotoStoreData() {
+        
+        photos = getStorePhotos()
+    }
+    
+    //Get Photos Store in Core Data
     func getStorePhotos() -> [Photo] {
         
         let request: NSFetchRequest<Photo> = NSFetchRequest(entityName: "Photo")
@@ -27,11 +38,15 @@ class PhotoViewModel: ObservableObject {
         }
     }
     
+    //Validate if User has Store Photos
     func hasStorePhotos() -> Bool {
+        
         return getStorePhotos().count > 0 ? true : false
     }
     
-    func saveImage(selectedImage: UIImage, latitude: Float, longitude: Float) {
+    //Save new photo in Photos Data Base
+    func saveImage(selectedImage: UIImage, latitude: Double, longitude: Double) {
+        
         let photo = Photo(context: context)
         photo.image = selectedImage
         photo.latitude = latitude

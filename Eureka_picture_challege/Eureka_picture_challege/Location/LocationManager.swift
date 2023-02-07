@@ -10,6 +10,7 @@ import CoreLocation
 import Combine
 
 class LocationManager: NSObject, ObservableObject {
+    
     private let locationManager = CLLocationManager()
     
     @Published var location: CLLocation? {
@@ -18,11 +19,15 @@ class LocationManager: NSObject, ObservableObject {
         }
     }
     
+    //Get User Location Latitude
     var latitude: CLLocationDegrees {
+        
         return location?.coordinate.latitude ?? 0
     }
     
+    //Get User Location Longitude
     var longitude: CLLocationDegrees {
+        
         return location?.coordinate.longitude ?? 0
     }
     
@@ -37,7 +42,9 @@ class LocationManager: NSObject, ObservableObject {
 }
 
 extension LocationManager: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         guard let location = locations.last else { return }
         self.location = location
     }

@@ -12,5 +12,6 @@ struct APIConfig {
     
     static let shared = APIConfig()
     
+    //Save Google Maps API Key
     let gMapsApiKey = "AIzaSyDtUmndbo1BlYtR11avE8GejZDTPJmjxns"
 }

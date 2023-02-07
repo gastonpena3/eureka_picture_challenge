@@ -10,6 +10,7 @@ import UIKit
 
 class PhotoImageTransformer: ValueTransformer {
     
+    //Transform UIImage to data for save in Core Data
     override func transformedValue(_ value: Any?) -> Any? {
         
         guard let image = value as? UIImage else { return nil }
@@ -20,6 +21,7 @@ class PhotoImageTransformer: ValueTransformer {
         }
     }
     
+    //Transform data to UIImage
     override func reverseTransformedValue(_ value: Any?) -> Any? {
         
         guard let data = value as? Data else { return nil }

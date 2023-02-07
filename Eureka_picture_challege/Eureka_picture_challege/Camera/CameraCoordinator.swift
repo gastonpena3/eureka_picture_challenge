@@ -9,9 +9,11 @@ import UIKit
 import Photos
 
 class CameraCoordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
     var camera: CameraManager
     
     init(picker: CameraManager) {
+        
         self.camera = picker
     }
     

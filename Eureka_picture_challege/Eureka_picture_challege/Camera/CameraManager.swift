@@ -17,21 +17,23 @@ struct CameraManager: UIViewControllerRepresentable {
     var sourceType: UIImagePickerController.SourceType
         
     func makeUIViewController(context: Context) -> UIImagePickerController {
+        
         let picker = UIImagePickerController()
         picker.delegate = context.coordinator
+        
         if !UIImagePickerController.isSourceTypeAvailable(.camera){
             picker.sourceType = .photoLibrary
         } else {
             picker.sourceType = .camera
         }
+        
         return picker
     }
 
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
-
-    }
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
 
     func makeCoordinator() -> CameraCoordinator {
+        
         return Coordinator(picker: self)
     }
 }

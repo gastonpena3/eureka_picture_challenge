@@ -8,26 +8,30 @@
 import SwiftUI
 
 struct PhotoDetail: View {
-    
-    //private var context = CoreDataManager.shared.persistentContainer.viewContext
-    
+
     @ObservedObject var viewModel = PhotoViewModel()
-    
-    @StateObject var locationManager = LocationManager()
+
     @State private var selectedImage: UIImage
+    @State private var selectedImageLatitude: Double
+    @State private var selectedImageLongitude: Double
     
     private var isNewPhoto = false
     
-    init(selectedImage: UIImage, isNewPhoto: Bool) {
+    init(selectedImage: UIImage, selectedImageLatitude: Double, selectedImageLongitude: Double, isNewPhoto: Bool) {
+        
         self.selectedImage = selectedImage
+        self.selectedImageLatitude = selectedImageLatitude
+        self.selectedImageLongitude = selectedImageLongitude
         self.isNewPhoto = isNewPhoto
     }
-    
+
     var body: some View {
         ZStack {
+            
             Color.white
                 .edgesIgnoringSafeArea(.all)
             VStack {
+                
                 Image(uiImage: self.selectedImage)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -36,7 +40,7 @@ struct PhotoDetail: View {
                     .shadow(color: Color.black.opacity(0.5), radius: 15, x: 0, y: 0)
                     .padding(.bottom, 10)
                 
-                GoogleMapsView()
+                GoogleMapsView(latitude: selectedImageLatitude, longitude: selectedImageLongitude)
                     .frame(width: UIScreen.main.bounds.width - 80, height: UIScreen.main.bounds.width - 80)
                     .cornerRadius(20)
                     .shadow(color: Color.black.opacity(0.5), radius: 15, x: 0, y: 0)
@@ -49,9 +53,12 @@ struct PhotoDetail: View {
         .toolbarBackground(.red, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         
-        .onDisappear() {
+        .onAppear() {
+            
             if isNewPhoto {
-                viewModel.saveImage(selectedImage: selectedImage, latitude: Float(locationManager.latitude), longitude: Float(locationManager.longitude))
+                
+                viewModel.saveImage(selectedImage: selectedImage, latitude: Double(viewModel.locationManager.latitude), longitude: Double(viewModel.locationManager.longitude))
+                viewModel.updatePhotoStoreData()
             }
         }
     }
