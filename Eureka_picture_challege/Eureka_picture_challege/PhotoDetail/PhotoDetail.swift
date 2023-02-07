@@ -9,11 +9,11 @@ import SwiftUI
 
 struct PhotoDetail: View {
 
-    @ObservedObject var viewModel = PhotoViewModel()
+    @ObservedObject private var viewModel = PhotoViewModel()
 
-    @State private var selectedImage: UIImage
-    @State private var selectedImageLatitude: Double
-    @State private var selectedImageLongitude: Double
+    private var selectedImage: UIImage
+    private var selectedImageLatitude: Double
+    private var selectedImageLongitude: Double
     
     private var isNewPhoto = false
     

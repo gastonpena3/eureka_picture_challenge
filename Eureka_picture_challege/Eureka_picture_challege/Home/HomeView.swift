@@ -10,7 +10,7 @@ import CoreData
 
 struct HomeView: View {
     
-    @ObservedObject var viewModel = PhotoViewModel()
+    @ObservedObject private var viewModel = PhotoViewModel()
     
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State private var selectedImage: UIImage?
@@ -96,7 +96,7 @@ struct HomeView: View {
             .sheet(isPresented: self.$isImagePickerDisplay, onDismiss: {
                 
                 if selectedImage != nil {
-                    
+    
                     showNextPage.toggle()
                 }
             }) {
